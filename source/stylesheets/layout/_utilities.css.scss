@@ -21,11 +21,11 @@
   background: #00a3e1;
 }
 .bg-facebook {
-  background: #3b5998;
+  background: $blue;
 }
 
 h1, h2, h3 {
-  font-family: Raleway, Helvetica, sans-serif;
+  font-family: $base-font
 }
 h2 {
   font-size: 28px;
@@ -38,7 +38,7 @@ h2 {
   padding: 120px 0;
 }
 .wrapper-grey {
-  background: #F4F4F4;
+  background: $gray-lighter;
 }
 
 #newsletter{

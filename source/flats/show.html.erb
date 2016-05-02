@@ -1,0 +1,99 @@
+<!-- Read from data.flats with owner's name as key -->
+<% flat = data.flats[owner] %>
+
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%), url('<%= image_path flat.picture %>'); height: 30vh; background-position: center;">
+</div>
+
+<div id="header-flat">
+<div class="container">
+  <div class="row">
+  <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+    <div class="card-profile padded">
+      <div class="card-profile-picture">
+        <%= image_tag flat.owner_picture, class: "img-circle" %>
+        <p><%= flat.owner_name %></p>
+
+      </div>
+    <div class="card-profile-details">
+
+    <h1><%= flat.description %></h1>
+    <p><%= flat.city %>
+    <% flat.rate.times do  %>
+      <i class="fa fa-star" style="color: rgb(255, 180, 0)"></i>
+    <% end %>
+    <% (5 - flat.rate).times do %>
+       <i class="fa fa-star" style="color: rgb(202, 204, 205)"></i>
+    <% end %>
+    </p>
+
+    </div>
+    </div>
+   </div>
+   <div class="col-xs-12 col-sm-4">
+    <form action="">
+    <h2>Book this flat</h2>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-xs-6">
+            <input type="text" placeholder="check-in" class="form-control">
+          </div>
+          <div class="col-xs-6">
+            <input type="text" placeholder="check-out" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <select name="" id="" class="form-control">
+        <option value="1">1 guest</option>
+        <option value="2">2 guests</option>
+        <option value="3">3 guests</option></select>
+      </div>
+      <input type="submit" value="Book it" class="btn btn-danger" style="width:100%">
+
+    </form>
+
+   </div>
+  </div>
+ </div>
+</div>
+
+<div id="body-flat">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h2>About this flat</h2>
+          <p>
+            This bedroom is great
+          </p>
+          <hr>
+          <div class="row">
+            <div class="col-xs-12 col-sm-2">
+            <p>The space</p>
+            </div>
+              <div class="col-xs-12 col-sm-4">
+                <ul class="list-unstyled">
+                  <li>Accomodates: 2</li>
+                  <li>Bathroom: 3</li>
+                  <li>Bed type: Real bed</li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-2">
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fa fa-cutlery"></i> Kitchen
+                  </li>
+                  <li>
+                    <i class="fa fa-wifi"></i> Wifi
+                  </li>
+                  <li></li>
+                </ul>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Inject flat data in template -->

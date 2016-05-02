@@ -46,3 +46,38 @@
 .card-link:hover{
   opacity: 0.3;
 }
+
+
+.card-profile{
+  display: flex;
+  padding: 20 px;
+  align-items: center;
+  color: $gray-light;
+}
+
+.card-profile img{
+  width: 80px
+}
+
+.card-profile p{
+  font-size: 14px;
+  color: gray-lighter
+}
+
+.card-profile h1{
+  font-size: 19px;
+  color: $gray-light;
+  margin-top: 0
+}
+
+.card-profile-details{
+  padding-left:20px
+}
+
+
+
+
+
+
+
+

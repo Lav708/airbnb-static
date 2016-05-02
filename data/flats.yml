@@ -1,0 +1,32 @@
+seb:
+  owner_name: Sebastien Saunier
+  picture: http://www.dudalinafeminina.com.br/blog/wp-content/uploads/2013/08/paris2.jpg
+  owner_picture: images/seb.jpg
+  name: Seb's home
+  summary: Charming room in Trocadéro
+  city: Paris
+  country: France
+  rate: 5
+  wifi: true
+
+romain:
+  owner_name: Romain Paillard
+  picture: images/card-london.jpeg
+  owner_picture: images/romain.jpg
+  name: Romain's home
+  summary: Nice flat in Piccadilly
+  city: London
+  country: UK
+  rate: 4
+  wifi: true
+
+anne:
+  owner_name: Anne
+  picture: images/card-brussels.jpeg
+  owner_picture: images/anne.jpg
+  name: Anne's home
+  summary: Nice flat in Belgium capital
+  city: Brussels
+  country: Belgium
+  rate: 3
+  wifi: false

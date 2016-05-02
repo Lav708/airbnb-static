@@ -40,45 +40,24 @@ title: Le Wagon Middleman boilerplate
 
  <!-- Your cards code -->
     <div class="wrapper-grey">
-      <div class="container" style="padding: 70px">
-        <h2 class="text-center"> Your next trip</h2>
-        <div class="row">
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
-              <div class="card-category">Paris</div>
-              <div class="card-description">
-                <h2>Chez Seb</h2>
-                <p>Le code ça paye</p>
-              </div>
-              <img class="card-user avatar" src="images/seb.jpg">
-              <a class="card-link" href="#"></a>
+        <div class="container padded">
+      <div class="row">
+        <% data.flats.each do |owner, flat| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background-image: url('<%= image_path flat.picture %>');">
+            <div class="card-category"><%= flat.city %></div>
+            <div class="card-description">
+              <h2><%= flat.name %></h2>
+              <p><%= flat.summary %></p>
             </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
-              <div class="card-category">Londres</div>
-              <div class="card-description">
-                <h2>Chez Romain</h2>
-                <p>Il avait le bon dossier</p>
-              </div>
-              <img class="card-user avatar" src="images/romain.jpg">
-              <a class="card-link" href="#"></a>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-brussels.jpeg');">
-              <div class="card-category">Bruxelles</div>
-              <div class="card-description">
-                <h2>Chez Anne</h2>
-                <p>Coool place</p>
-              </div>
-              <img class="card-user avatar" src="images/anne.jpg">
-              <a class="card-link" href="#"></a>
-            </div>
+            <%= image_tag flat.owner_picture, class:"card-user avatar avatar-large" %>
+            <%= link_to "flats/#{owner}.html", "#", class: "card-link" %>
           </div>
         </div>
+        <% end %>
       </div>
     </div>
+  </div>
  <!-- Your newsletter code -->
     <div class="text-center" id="newsletter">
       <h2>Reste informé</h2>
